@@ -29,7 +29,7 @@ namespace BikeShop
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            dg1.ItemsSource = factory.FindProducts("");
+            dg1.ItemsSource = factory.FindProducts(txtsearch.Text);
         }
     }
 }

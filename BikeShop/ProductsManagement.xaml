@@ -30,7 +30,9 @@
             <TextBlock Text="Search:" 
                        Margin="0 0 10 0"/>
             <TextBox Width="350"
-                     Margin="0 3 0 0" TextChanged="TextBox_TextChanged">
+                     Margin="0 3 0 0" 
+                     TextChanged="TextBox_TextChanged"
+                     x:Name="txtsearch">
                 <TextBox.Background>
                     <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
                         <GradientStop Color="LightGreen" Offset="1"/>
@@ -45,21 +47,23 @@
         <Border Grid.Row="2"
                 Grid.Column="2"
                 Background="LightGreen"
-                Margin="10">
+                Margin="10"
+                DataContext="{Binding SelectedItem, ElementName=dg1}">
             <StackPanel Margin="10">
                 <TextBlock Text="Product details"
                            FontWeight="Bold"
                            FontSize="16" 
                            HorizontalAlignment="Center" />
                 <TextBlock Text="Title" />
-                <TextBox />
+                <TextBox Text="{Binding Title, Mode=TwoWay}"/>
                 <TextBlock Text="Price" />
-                <TextBox />
+                <TextBox Text="{Binding Price, Mode=TwoWay}"/>
                 <TextBlock Text="Color" />
-                <TextBox />
-                <Border Height="10" />
+                <TextBox Text="{Binding Color, Mode=TwoWay}"/>
+                <Border Height="10" 
+                        Background="{Binding Color}"/>
                 <TextBlock Text="Reference" />
-                <TextBox />
+                <TextBox Text="{Binding Reference, Mode=TwoWay}"/>
             </StackPanel>
         </Border>
     </Grid>
