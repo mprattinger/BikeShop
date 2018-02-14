@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:BikeShop"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="Discussion">
+      Title="Discussion"
+      Background="{StaticResource background}">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -42,6 +43,21 @@
         <Button Grid.Row="1"
                 Grid.Column="1"
                 Margin="5"
-                Content="Send" />
+                Content="Send"
+                Background="Yellow">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="#AA000000"
+                                 Margin="10, 10, 0, 0" />
+                        <Ellipse Fill="{TemplateBinding Background}" 
+                                 Margin="0, 0, 10, 10"/>
+                        <Viewbox Margin="5, 5, 15, 15">
+                            <ContentPresenter />
+                        </Viewbox>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>
