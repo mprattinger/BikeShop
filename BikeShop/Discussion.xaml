@@ -49,7 +49,7 @@
                 <ControlTemplate TargetType="Button">
                     <Grid>
                         <Ellipse Fill="#AA000000"
-                                 Margin="10, 10, 0, 0" />
+                                 Margin="5, 5, 3, 3" />
                         <Ellipse Fill="{TemplateBinding Background}" 
                                  Margin="0, 0, 10, 10"/>
                         <Viewbox Margin="5, 5, 15, 15">

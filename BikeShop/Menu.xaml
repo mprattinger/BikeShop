@@ -8,11 +8,37 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Title="Menu"
       Background="{StaticResource background}">
-
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="#AA000000"
+                                 Margin="5, 5, 3, 3" />
+                            <Ellipse Fill="{TemplateBinding Background}" 
+                                 Margin="0, 0, 10, 10"/>
+                            <Viewbox Margin="5, 5, 15, 15">
+                                <ContentPresenter />
+                            </Viewbox>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </Page.Resources>
     <Grid>
-        <Button Content="Products" HorizontalAlignment="Left" Margin="10,112,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="75"/>
-        <Button Content="Live support" HorizontalAlignment="Left" Margin="109,112,0,0" VerticalAlignment="Top" Width="75" Height="75" Click="Button_Click_2"/>
-        <Button Content="Email support" HorizontalAlignment="Left" Margin="215,112,0,0" VerticalAlignment="Top" Width="75" Height="75" Click="Button_Click_1"/>
+        <Button Content="Products" 
+                HorizontalAlignment="Left" 
+                Margin="10,112,0,0" VerticalAlignment="Top" Width="75" 
+                Click="Button_Click" Height="75" Background="Violet"/>
+        <Button Content="Live support" HorizontalAlignment="Left" Margin="109,112,0,0" 
+                VerticalAlignment="Top" Width="75" Height="75" 
+                Click="Button_Click_2" Background="Orange"/>
+        <Button Content="Email support" HorizontalAlignment="Left" Margin="215,112,0,0" 
+                VerticalAlignment="Top" Width="75" Height="75" 
+                Click="Button_Click_1" Background="Firebrick"/>
         <TextBlock HorizontalAlignment="Left" Margin="101,204,0,0" TextWrapping="Wrap" Text="Adventure Works" VerticalAlignment="Top"/>
 
     </Grid>
